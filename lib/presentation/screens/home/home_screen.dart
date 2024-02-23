@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
-import 'package:widgets_app/presentation/screens/buttons/buttons_screens.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -43,26 +43,24 @@ class _CustomListTile extends StatelessWidget {
     final colors = Theme.of(context).colorScheme;
 
     return ListTile(
-      leading: Icon(
-        menuItem.icon,
-        color: colors.primary,
-      ),
-      trailing: Icon(
-        Icons.arrow_forward_ios_rounded,
-        color: colors.primary,
-      ),
-      title: Text(menuItem.title),
-      subtitle: Text(menuItem.subTitle),
-      onTap: () {
-       // Navigator.of(context).push(
+        leading: Icon(
+          menuItem.icon,
+          color: colors.primary,
+        ),
+        trailing: Icon(
+          Icons.arrow_forward_ios_rounded,
+          color: colors.primary,
+        ),
+        title: Text(menuItem.title),
+        subtitle: Text(menuItem.subTitle),
+        onTap: () {
+          // Navigator.of(context).push(
           //MaterialPageRoute(
-           // builder: (context) => const ButtonScreen() ,
-         // )
-        Navigator.pushNamed(context, menuItem.link);
-      }
-        );
-      }
-      //TODO: Navegar a otra pantalla
-    
+          // builder: (context) => const ButtonScreen() ,
+          // )
+          //Navigator.pushNamed(context, menuItem.link);
+          context.push(menuItem.link);  
+        });
   }
-
+  //TODO: Navegar a otra pantalla
+}

@@ -72,5 +72,11 @@ const appMenuItems = <MenuItem>[
     link: '/infinite',
     icon: Icons.list_alt_rounded
   ),
+   MenuItem(
+    title: 'Cmabiar tema',
+    subTitle: 'Cambiar tema de la aplicacion',
+    link: '/theme-changer',
+    icon: Icons.color_lens_outlined
+  ),
   
 ];

@@ -33,7 +33,7 @@ class _SideMenuState extends State<SideMenu> {
         children: [
           Padding(
             padding: EdgeInsets.fromLTRB(28, hasNotch ? 10 : 20, 16, 10),
-            child: Text('Main'),
+            child: const Text('Main'),
           ),
           ...appMenuItems.sublist(0, 3).map(
                 (item) => NavigationDrawerDestination(

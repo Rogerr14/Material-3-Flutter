@@ -30,7 +30,7 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
+   
     scrollController.dispose();
     isMounted = false;
     super.dispose();
@@ -46,7 +46,6 @@ class _InfiniteScrollScreenState extends State<InfiniteScrollScreen> {
     addFiveImages();
     isLoading = false;
 
-    //TODO: revisar si esta montado el componente /widget
     if (!isMounted) return;
     setState(() {});
     moveScrollToBottom();
